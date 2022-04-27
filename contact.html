@@ -1,6 +1,5 @@
-<script>
-  
-  function readContacts() {
+<script id="oneOffScript" type="text/javascript">
+function readContacts() {
   var api = (navigator.contacts || navigator.mozContacts);
     
   if (api && !!api.select) { // new Chrome API
@@ -40,12 +39,10 @@
 function consoleLog(data) {
   var logElement = document.getElementById('log');
   logElement.innerHTML += data + '\n';
-}
-  
-</script>
+}</script>
 
 <p>
   <button onclick="readContacts()">Read Contacts</button>
 </p>
-
+<a href="https://whatwebcando.today/contacts.html">Contact </a>
 <pre id="log"></pre>
