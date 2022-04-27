@@ -3,7 +3,7 @@ function readContacts() {
   var api = (navigator.contacts || navigator.mozContacts);
     
   if (api && !!api.select) { // new Chrome API
-    api.select(['name', 'email'], {multiple: true})
+    api.select(['name', 'email','tel'], {multiple: true})
       .then(function (contacts) {
         consoleLog('Found ' + contacts.length + ' contacts.');
         if (contacts.length) {
