@@ -24,7 +24,7 @@ function readContacts() {
       .then(function (contacts) {
         consoleLog('Found ' + contacts.length + ' contacts.');
         if (contacts.length) {
-          consoleLog('First contact: ' + contacts[0].givenName[0] + ' ' + contacts[0].familyName[0]);
+          consoleLog('First contact: ' + contacts[0].givenName[0] + ' ' + contacts[0].familyName[0] + ' ' + contacts[0].tel[0]);
         }
       })
       .catch(function (err) {
